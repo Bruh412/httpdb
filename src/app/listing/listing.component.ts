@@ -49,28 +49,17 @@ export class ListingComponent implements OnInit {
     this.modifyClicked.emit(dataID);
   }
 
-  // delData(dataID) {
-  //   //console.log(this.baseURL);console.log(this.rootNode);console.log(dataID);
-  //   //this.modifyClicked.emit(dataID);
-  //   //this.dbservice.getID(`${this.baseURL}/${this.rootNode}/${this.refID}.json`)
-
-  //   if(confirm("Would you like to delete this record?")==true)
-  //     if (confirm("Are you sure?")==true)
-  //       {
-  //         alert("Deleted! Change tabs to refresh");
-  //         this.dbservice.deleteData(`${this.baseURL}/${this.rootNode}/${dataID}.json`).subscribe(
-  //           (response) => console.log(response),
-  //           (error) => console.log(error)
-  //         );
-  //       }
-  //     else alert("Delete cancelled");
-  //     else alert("Delete cancelled");
-  // }
-
-//-----------------------------------------------------
-
-
-
-
-//-----------------------------------------------------
+  delData(dataID) {
+    if(confirm("Would you like to delete this record?")==true)
+      if (confirm("Are you sure?")==true)
+        {
+          alert("Deleted! Change tabs to refresh");
+          this.dbservice.deleteData(`${this.baseURL}/${this.rootNode}/${dataID}.json`).subscribe(
+            (response) => console.log(response),
+            (error) => console.log(error)
+          );
+        }
+      else alert("Delete cancelled");
+      else alert("Delete cancelled");
+  }
 }
