@@ -1,0 +1,29 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>
+        First Name
+      </th>
+      <th>
+        Last Name
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let person of peopleCollection">
+      <td>{{ person.firstName }}</td>
+      <td>{{ person.lastName }}</td>
+      <td>
+        <button *ngIf="edit" (click)="modifyData(person.id)" class="btn btn-warning">
+           Edit 
+        </button>
+         <button *ngIf="remove" (click)="delData(person.id)" class="btn btn-danger">
+           Remove 
+        </button> 
+      </td>
+      <td>
+        <a href="https://firstproject-4a0fc.firebaseio.com/people/{{ person.id }}.json">Link</a>
+      </td>
+    </tr> 
+  </tbody>
+</table>

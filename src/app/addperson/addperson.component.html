@@ -1,0 +1,20 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 col-md-offset-1">
+        <form (ngSubmit)="addNameEntry(nameForm)" #nameForm="ngForm">
+          <div class="form-group">
+            <label for="fname"></label>
+            <input type="text" id="fname" class="form-control" name="fname" ngModel placeholder="First Name">
+          </div>
+          <div class="form-group">
+            <label for="lname"></label>
+            <input type="text" id="lname" class="form-control" name="lname" ngModel placeHolder="Last Name">
+          </div>
+          <button type="submit" class="btn btn-primary">
+               Save Information
+          </button>
+        </form> 
+    </div>
+  </div>
+</div>

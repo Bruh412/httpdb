@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <button class="btn btn-primary" (click)="retrieve()">
+          Get Data From Firebase
+      </button>
+      <ul class="nav nav-tabs">
+        <li><a routerLink="/">Home</a></li>
+        <li><a routerLink="/insert">Add Information</a></li>
+        <li><a routerLink="/modify">Update Information</a></li>
+        <li><a routerLink="/remove">Remove Information</a></li>
+        <li><a routerLink="/list">Show All Entries</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
